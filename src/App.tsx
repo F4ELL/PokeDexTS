@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import Button from "./Button"
 import PokeApi from "./PokeApi"
 
 function App() {
@@ -17,7 +18,9 @@ function App() {
 
   return (
     <div>
-        
+        {pokeList.map((item, key) => (
+          <Button item={item} key={key}/>
+        ))}
     </div>
   )
 }
