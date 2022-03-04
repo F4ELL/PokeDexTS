@@ -17,11 +17,7 @@ function App() {
 
   return (
     <div>
-        {pokeList.map((item, key) => (
-          <div key={key}>
-            {item.title}
-          </div>
-        ))} 
+        
     </div>
   )
 }
