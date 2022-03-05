@@ -5,8 +5,12 @@ const Button = ({item}) => {
   return (
     <div>
         <StyledButton>
-            <img src={item.items.sprites.other.home.front_default} alt="alo" />
-            {item.title}
+            <div className='btn--container'>
+                <div className='btn--img-area'>
+                    <img src={item.items.sprites.other.home.front_default} alt="alo" />
+                </div>
+                <span>{item.title}</span>
+            </div>
         </StyledButton>
     </div>
   )

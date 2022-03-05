@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Button from "./Button"
+import Card from "./Card"
+import GlobalStyle from "./globalStyles"
 import PokeApi from "./PokeApi"
 
 function App() {
@@ -18,9 +20,13 @@ function App() {
 
   return (
     <div>
+
+    <GlobalStyle />
         {pokeList.map((item, key) => (
           <Button item={item} key={key}/>
         ))}
+
+        <Card item={pokeList}/>
     </div>
   )
 }
