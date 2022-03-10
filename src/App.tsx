@@ -30,6 +30,7 @@ function App() {
 
   const handleButton = (key: number) => {
     setCurrent(key)
+    
   }
 
   return (
@@ -37,11 +38,12 @@ function App() {
 
     <GlobalStyle />
         {pokeList.map((item, key) => (
-          <Button key={key} item={item} current={setCurrent}/>
-          
+          <Button key={key} item={item} current={setCurrent} index={key}/>
         ))}
+        
+        
 
-        <Card item={pokeList[current]}/>
+        <Card item={pokeList[current]} index={current}/>
     </div>
   )
 }

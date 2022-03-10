@@ -15,11 +15,6 @@ export const StyledButton = styled.button`
     justify-content: space-between;
     align-items: center;
     background-image: linear-gradient(to bottom, #44474C, #4A505A); 
-
-
-    .btn--image-area{
-        
-    }
     
 
     img{
