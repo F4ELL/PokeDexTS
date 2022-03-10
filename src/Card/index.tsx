@@ -6,18 +6,16 @@ const Card = ({item}) => {
     <div>
         <StyledCard>
             <div className='card--container'>
-                <div className="card--title"></div>
-                <div className="card--id"></div>
-                <div className="card--style"></div>
-                <div className="card-image"></div>
-                <div className="card--info">
-                    <div className="card--status">
-                        <h3>Status</h3>
-                    </div>
-                    <div className="card--skills">
-                        <h3>Habilidades</h3>
-                    </div>
+                <div className="card--title">
+                    <h2>{item[0].title}</h2>
                 </div>
+                <div className="card--number">
+                    <span>#001</span>    
+                </div>
+                <div className="card--type">
+                    {item[0].items.types.type}    
+                </div>
+                
             </div>
         </StyledCard>
     </div>

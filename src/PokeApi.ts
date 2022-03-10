@@ -1,4 +1,4 @@
-const API_BASE = 'https://pokeapi.co/api/v2/'
+const API_BASE = 'https://pokeapi.co/api/v2/pokemon/'
 
 const basicFetch = async (endpoint: string) => {
     const response = await fetch(`${API_BASE}${endpoint}`)
@@ -13,32 +13,32 @@ export default {
             {
                 slug: 'pikachu',
                 title: 'Pikachu',
-                items: await basicFetch('pokemon/pikachu')
+                items: await basicFetch('pikachu')
             },
             {
                 slug: 'bulbasaur',
                 title: 'Bulbasaur',
-                items: await basicFetch('pokemon/bulbasaur')
+                items: await basicFetch('bulbasaur')
             },
             {
                 slug: 'charmander',
                 title: 'Charmander',
-                items: await basicFetch('pokemon/charmander')
+                items: await basicFetch('charmander')
             },
             {
                 slug: 'gyarados',
                 title: 'Gyarados',
-                items: await basicFetch('pokemon/gyarados')
+                items: await basicFetch('gyarados')
             },
             {
                 slug: 'gengar',
                 title: 'Gengar',
-                items: await basicFetch('pokemon/gengar')
+                items: await basicFetch('gengar')
             },
             {
                 slug: 'dragonite',
                 title: 'Dragonite',
-                items: await basicFetch('pokemon/dragonite')
+                items: await basicFetch('dragonite')
             }
         ]
     }

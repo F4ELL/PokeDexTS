@@ -24,7 +24,6 @@ export const StyledButton = styled.button`
 
     img{
         width: 60px;
-        height: 70px;
         border-radius: 50%;
     }
 `
