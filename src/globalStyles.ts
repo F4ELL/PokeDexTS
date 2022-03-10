@@ -1,4 +1,4 @@
-import { createGlobalStyle, createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
@@ -10,6 +10,25 @@ const GlobalStyle = createGlobalStyle`
 
     body{
         font-family: 'Poppins', sans-serif;
+        height: 100vh;
+        background-image: linear-gradient(to bottom, #909698 90%, #8E9598 10%);
+    }
+
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 60px;
+        gap: 40px;
+    }
+
+    .btn--poke{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+        
     }
 `
 

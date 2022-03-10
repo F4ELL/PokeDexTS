@@ -10,9 +10,7 @@ export type TPoke = {
   items: any
 }
 
-function App() {
-
-  
+function App() {  
 
   const [ pokeList, setPokeList ] = useState<TPoke[]>([])
   const [ current, setCurrent ] = useState(0)
@@ -27,23 +25,17 @@ function App() {
     loadAll()
   }, [])
 
-
-  const handleButton = (key: number) => {
-    setCurrent(key)
-    
-  }
-
   return (
     <div>
-
     <GlobalStyle />
-        {pokeList.map((item, key) => (
-          <Button key={key} item={item} current={setCurrent} index={key}/>
-        ))}
-        
-        
-
-        <Card item={pokeList[current]} index={current}/>
+        <div className="container">          
+          <Card item={pokeList[current]} index={current}/>
+          <div className="btn--poke">
+            {pokeList.map((item, key) => (
+              <Button key={key} item={item} current={setCurrent} index={key}/>
+            ))}
+          </div>
+        </div>
     </div>
   )
 }

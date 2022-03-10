@@ -13,13 +13,15 @@ const Card: React.FC<TCardPoke> = ({item, index}) => {
         <StyledCard>
             <div className='card--container'>
                 <div className='card--top'>
-                    <div className="card--title">
-                        <h2>{item?.title}</h2>
+                    <div className='card--desc'>
+                        <div className="card--title">
+                            <h2>{item?.title}</h2>
+                        </div>
+                        <div className="card--number">                    
+                            <span>{`#00${index + 1}`}</span>
+                        </div>
                     </div>
-                    <div className="card--number">
-                        <span>{`#00${index + 1}`}</span>
-                    </div>
-                    <div className="card--type">
+                    <div className="card--type">                        
                         <span>{item?.items.types[0].type.name}</span>
                     </div>
                 </div>
