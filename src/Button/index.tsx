@@ -1,7 +1,12 @@
 import React from 'react'
+import { TPoke } from '../App'
 import { StyledButton } from './StyledButton'
 
-const Button = ({item}) => {
+type TCurrentPoke = {
+  item: TPoke
+}
+
+const Button: React.FC<TCurrentPoke> = ({item}) => {
   return (
     <div>
         <StyledButton>                

@@ -7,13 +7,13 @@ const Card = ({item}) => {
         <StyledCard>
             <div className='card--container'>
                 <div className="card--title">
-                    <h2>{item[0].title}</h2>
+                    <h2>{item.title}</h2>
                 </div>
                 <div className="card--number">
                     <span>#001</span>    
                 </div>
                 <div className="card--type">
-                    {item[0].items.types.type}    
+                      
                 </div>
                 
             </div>

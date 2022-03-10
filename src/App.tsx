@@ -4,9 +4,18 @@ import Card from "./Card"
 import GlobalStyle from "./globalStyles"
 import PokeApi from "./PokeApi"
 
+export type TPoke = {
+  title: string,
+  slug: string,
+  items: any
+}
+
 function App() {
 
-  const [ pokeList, setPokeList ] = useState([])
+  
+
+  const [ pokeList, setPokeList ] = useState<TPoke[]>([])
+  const [ current, setCurrent ] = useState(0)
 
 
   useEffect(() => {
@@ -23,10 +32,11 @@ function App() {
 
     <GlobalStyle />
         {pokeList.map((item, key) => (
-          <Button item={item} key={key}/>
+          <Button key={key} item={item}/>
+          
         ))}
 
-        <Card item={pokeList}/>
+        <Card item={pokeList[current]}/>
     </div>
   )
 }
