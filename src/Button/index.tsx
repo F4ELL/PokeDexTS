@@ -3,13 +3,15 @@ import { TPoke } from '../App'
 import { StyledButton } from './StyledButton'
 
 type TCurrentPoke = {
-  item: TPoke
+  item: TPoke,
+  current: (x: number) => void,
+  key: number
 }
 
-const Button: React.FC<TCurrentPoke> = ({item}) => {
+const Button: React.FC<TCurrentPoke> = ({item, current, key}) => {
   return (
     <div>
-        <StyledButton>                
+        <StyledButton onClick={() => current(key)}>                
           <div className='btn--image-area'></div>
           <img src={item.items.sprites.other.home.front_default} alt="Image" />
           <span>{item.title}</span>            

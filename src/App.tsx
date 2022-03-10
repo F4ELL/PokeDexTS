@@ -27,12 +27,17 @@ function App() {
     loadAll()
   }, [])
 
+
+  const handleButton = (key: number) => {
+    setCurrent(key)
+  }
+
   return (
     <div>
 
     <GlobalStyle />
         {pokeList.map((item, key) => (
-          <Button key={key} item={item}/>
+          <Button key={key} item={item} current={setCurrent}/>
           
         ))}
 

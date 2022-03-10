@@ -12,7 +12,7 @@ const Card: React.FC<TCardPoke> = ({item}) => {
         <StyledCard>
             <div className='card--container'>
                 <div className="card--title">
-                    <h2></h2>
+                    <h2>{item?.title}</h2>
                 </div>
                 <div className="card--number">
                     <span>#001</span>    
