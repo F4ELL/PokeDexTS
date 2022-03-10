@@ -1,13 +1,18 @@
 import React from 'react'
+import { TPoke } from '../App'
 import { StyledCard } from './StyledCard'
 
-const Card = ({item}) => {
+type TCardPoke = {
+    item: TPoke
+} 
+
+const Card: React.FC<TCardPoke> = ({item}) => {
   return (
     <div>
         <StyledCard>
             <div className='card--container'>
                 <div className="card--title">
-                    <h2>{item.title}</h2>
+                    <h2></h2>
                 </div>
                 <div className="card--number">
                     <span>#001</span>    
