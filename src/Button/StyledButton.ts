@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button`
+interface TStyledButton{
+    selected: boolean,
+    buttonColor: string
+}
+
+export const StyledButton = styled.button<TStyledButton>`
     
     width: 230px;
     height: 70px;
@@ -14,7 +19,7 @@ export const StyledButton = styled.button`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-image: linear-gradient(to bottom, #44474C, #4A505A); 
+    background-color: ${(props) => props.selected ? props.buttonColor : "#434A52"};
     margin-bottom: 10px;
     border: none;
     cursor: pointer;
