@@ -11,32 +11,32 @@ export default {
     getPokeList: async () => {
         return [
             {
-                slug: 'pikachu',
+                color: '#D4A813',
                 title: 'Pikachu',
                 items: await basicFetch('pikachu')
             },
             {
-                slug: 'bulbasaur',
+                color: '#18d621',
                 title: 'Bulbasaur',
                 items: await basicFetch('bulbasaur')
             },
             {
-                slug: 'charmander',
+                color: '#d64418',
                 title: 'Charmander',
                 items: await basicFetch('charmander')
             },
             {
-                slug: 'gyarados',
+                color: '#1864d6',
                 title: 'Gyarados',
                 items: await basicFetch('gyarados')
             },
             {
-                slug: 'gengar',
+                color: '#7a18d6',
                 title: 'Gengar',
                 items: await basicFetch('gengar')
             },
             {
-                slug: 'dragonite',
+                color: '#d64418',
                 title: 'Dragonite',
                 items: await basicFetch('dragonite')
             }
