@@ -6,7 +6,7 @@ import PokeApi from "./PokeApi"
 
 export type TPoke = {
   title: string,
-  slug: string,
+  color: string,
   items: any
 }
 
@@ -32,7 +32,7 @@ function App() {
           <Card item={pokeList[current]} index={current}/>
           <div className="btn--poke">
             {pokeList.map((item, key) => (
-              <Button key={key} item={item} current={setCurrent} index={key}/>
+              <Button key={key} item={item} setCurrent={setCurrent} index={key} current={current}/>
             ))}
           </div>
         </div>
