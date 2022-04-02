@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
     body{
         font-family: 'Poppins', sans-serif;
         height: 100vh;
-        background-image: linear-gradient(to bottom, #909698 90%, #8E9598 10%);
+        background-image: linear-gradient(to bottom, #d1d1d1 20%, #8E9598);
     }
 
     .container{
