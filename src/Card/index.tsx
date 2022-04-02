@@ -10,7 +10,7 @@ type TCardPoke = {
 const Card: React.FC<TCardPoke> = ({item, index}) => {
   return (
     <div>
-        <StyledCard>
+        <StyledCard bgColor={item?.color}>
             <div className='card--container'>
                 <div className='card--top'>
                     <div className='card--desc'>
@@ -41,8 +41,8 @@ const Card: React.FC<TCardPoke> = ({item, index}) => {
                     <div className="card--skills">
                         <h3>Habilidades</h3>
                         <ul>
-                            {item?.items.abilities.map((item, key) => (
-                                <li key={key}>{item.ability.name}</li>
+                            {item?.items.abilities.map((ability: any, key: number) => (
+                                <li key={key}>{ability.ability.name}</li>
                             ))}
                         </ul>
                     </div>

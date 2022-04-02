@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 
-export const StyledCard = styled.div`
+type TStyledCard = {
+    bgColor: string
+}
+
+export const StyledCard = styled.div<TStyledCard>`
     .card--container{
         display: flex;
         flex-direction: column;
@@ -8,12 +12,12 @@ export const StyledCard = styled.div`
         background-color: #FFF;
         position: relative;
         border-radius: 10px;
-        box-shadow: 4px 4px 3px 1px rgba(0,0,0, .1);
+        box-shadow: 4px 4px 20px rgba(0,0,0, .1);
 
     }
 
     .card--top{
-        background-image: linear-gradient(to top, #C48A1C, #E2AA32);
+        background-color: ${props => props.bgColor};
         padding: 40px;
         height: 330px;
         border-top-left-radius: 10px;
@@ -38,9 +42,9 @@ export const StyledCard = styled.div`
     }
 
     .card--type span{
-        background-color: #C4AB7E;
+        background-color: #FFF;
         font-size: 14px;
-        color: #887145;
+        color: #000;
         padding: 5px 15px;
         border-radius: 15px;
     }
